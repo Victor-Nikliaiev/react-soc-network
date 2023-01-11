@@ -1,11 +1,11 @@
-import { Chat, Notifications, Person, Search } from "@material-ui/icons";
+import { Chat, Notifications, Person } from "@material-ui/icons";
 import * as S from "./Topbar.styled.js";
 
 export const Topbar = () => {
     return (
         <S.TopbarContainer>
             <S.TopbarLeft>
-                <S.Logo>Arhis GGN v 1.0</S.Logo>
+                <S.Logo>Arhis GGN v1.0</S.Logo>
             </S.TopbarLeft>
             <S.TopbarCenter>
                 <S.Searchbar>

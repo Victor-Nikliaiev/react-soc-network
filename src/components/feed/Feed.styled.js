@@ -1,3 +1,5 @@
 import styled from "styled-components";
 
-export const StyledFeed = styled.div``;
+export const Feed = styled.div`
+    flex: 5.5;
+`;

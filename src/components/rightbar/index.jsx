@@ -1,3 +1,5 @@
+import * as S from "./Rightbar.styled.js";
+
 export const Rightbar = () => {
-    return <div>Rightbar</div>;
+    return <S.Rightbar>Rightbar</S.Rightbar>;
 };

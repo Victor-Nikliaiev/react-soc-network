@@ -1,3 +1,5 @@
+import * as S from "./Feed.styled.js";
+
 export const Feed = () => {
-    return <div className='feed'>Feed</div>;
+    return <S.Feed>Feed</S.Feed>;
 };
