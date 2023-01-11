@@ -1,5 +1,3 @@
-import "./feed.scss";
-
 export const Feed = () => {
-    return <div>Sidebar</div>;
+    return <div className='feed'>Feed</div>;
 };

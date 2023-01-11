@@ -1,46 +1,42 @@
 import { Chat, Notifications, Person, Search } from "@material-ui/icons";
-import "./topbar.scss";
+import * as S from "./Topbar.styled.js";
 
 export const Topbar = () => {
     return (
-        <div className='topbarContainer'>
-            <div className='topbarLeft'>
-                <span className='logo'>Arhis GGN v 1.0</span>
-            </div>
-            <div className='topbarCenter'>
-                <div className='searchbar'>
-                    <Search className='searchIcon' />
-                    <input
-                        placeholder='Search for friends, post or any video...'
-                        className='searchInput'
-                    />
+        <S.TopbarContainer>
+            <S.TopbarLeft>
+                <S.Logo>Arhis GGN v 1.0</S.Logo>
+            </S.TopbarLeft>
+            <S.TopbarCenter>
+                <S.Searchbar>
+                    <S.SearchIcon />
+                    <S.SearchInput placeholder='Search for friends, post or any video...' />
+                </S.Searchbar>
+            </S.TopbarCenter>
+            <S.TopbarRight>
+                <div>
+                    <S.TopbarLink>Homepage</S.TopbarLink>
+                    <S.TopbarLink>Timeline</S.TopbarLink>
                 </div>
-            </div>
-            <div className='topbarRight'>
-                <div className='topbarLinks'>
-                    <span className='topbarLink'>Homepage</span>
-                    <span className='topbarLink'>Timeline</span>
-                </div>
-                <div className='topbarIcons'>
-                    <div className='topbarIconItem'>
+                <S.TopbarIcons>
+                    <S.TopbarIconItem>
                         <Person />
-                        <span className='topbarIconBadge'>1</span>
-                    </div>
-                    <div className='topbarIconItem'>
+                        <S.TopbarIconBadge>1</S.TopbarIconBadge>
+                    </S.TopbarIconItem>
+                    <S.TopbarIconItem>
                         <Chat />
-                        <span className='topbarIconBadge'>2</span>
-                    </div>
-                    <div className='topbarIconItem'>
+                        <S.TopbarIconBadge>2</S.TopbarIconBadge>
+                    </S.TopbarIconItem>
+                    <S.TopbarIconItem>
                         <Notifications />
-                        <span className='topbarIconBadge'>1</span>
-                    </div>
-                </div>
-                <img
+                        <S.TopbarIconBadge>1</S.TopbarIconBadge>
+                    </S.TopbarIconItem>
+                </S.TopbarIcons>
+                <S.TopbarImg
                     src='/assets/person/1.jpeg'
                     alt='profile picture'
-                    className='topbarImg'
                 />
-            </div>
-        </div>
+            </S.TopbarRight>
+        </S.TopbarContainer>
     );
 };
