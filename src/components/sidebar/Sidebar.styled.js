@@ -4,6 +4,8 @@ export const Sidebar = styled.div`
     flex: 3;
     height: calc(100vh - 50px);
     overflow-y: scroll;
+    position: sticky;
+    top: 50px;
 
     &::-webkit-scrollbar {
         width: 5px;

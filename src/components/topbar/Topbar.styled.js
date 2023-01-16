@@ -9,6 +9,7 @@ export const TopbarContainer = styled.div`
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 999;
 `;
 
 export const TopbarLeft = styled.div`

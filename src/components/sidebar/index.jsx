@@ -9,9 +9,9 @@ import {
     School,
     WorkOutline,
 } from "@material-ui/icons";
-
-import React from "react";
 import * as S from "./Sidebar.styled.js";
+import { Users } from "../../dummyData.js";
+import { CloseFriend } from "../close-friend";
 
 const menuItems = [
     {
@@ -70,69 +70,9 @@ export const Sidebar = () => {
                 <S.SidebarButton>Show More</S.SidebarButton>
                 <S.SidebarHr />
                 <S.SidebarFriendList>
-                    <S.SidebarFriend>
-                        <S.SidebarFriendImage
-                            src='/assets/person/2.jpeg'
-                            alt=''
-                        />
-                        <S.SidebarFriendName>Jane Doe</S.SidebarFriendName>
-                    </S.SidebarFriend>
-                    <S.SidebarFriend>
-                        <S.SidebarFriendImage
-                            src='/assets/person/2.jpeg'
-                            alt=''
-                        />
-                        <S.SidebarFriendName>Jane Doe</S.SidebarFriendName>
-                    </S.SidebarFriend>
-                    <S.SidebarFriend>
-                        <S.SidebarFriendImage
-                            src='/assets/person/2.jpeg'
-                            alt=''
-                        />
-                        <S.SidebarFriendName>Jane Doe</S.SidebarFriendName>
-                    </S.SidebarFriend>
-                    <S.SidebarFriend>
-                        <S.SidebarFriendImage
-                            src='/assets/person/2.jpeg'
-                            alt=''
-                        />
-                        <S.SidebarFriendName>Jane Doe</S.SidebarFriendName>
-                    </S.SidebarFriend>
-                    <S.SidebarFriend>
-                        <S.SidebarFriendImage
-                            src='/assets/person/2.jpeg'
-                            alt=''
-                        />
-                        <S.SidebarFriendName>Jane Doe</S.SidebarFriendName>
-                    </S.SidebarFriend>
-                    <S.SidebarFriend>
-                        <S.SidebarFriendImage
-                            src='/assets/person/2.jpeg'
-                            alt=''
-                        />
-                        <S.SidebarFriendName>Jane Doe</S.SidebarFriendName>
-                    </S.SidebarFriend>
-                    <S.SidebarFriend>
-                        <S.SidebarFriendImage
-                            src='/assets/person/2.jpeg'
-                            alt=''
-                        />
-                        <S.SidebarFriendName>Jane Doe</S.SidebarFriendName>
-                    </S.SidebarFriend>
-                    <S.SidebarFriend>
-                        <S.SidebarFriendImage
-                            src='/assets/person/2.jpeg'
-                            alt=''
-                        />
-                        <S.SidebarFriendName>Jane Doe</S.SidebarFriendName>
-                    </S.SidebarFriend>
-                    <S.SidebarFriend>
-                        <S.SidebarFriendImage
-                            src='/assets/person/2.jpeg'
-                            alt=''
-                        />
-                        <S.SidebarFriendName>Jane Doe</S.SidebarFriendName>
-                    </S.SidebarFriend>
+                    {Users.map(user => (
+                        <CloseFriend key={crypto.randomUUID()} {...user} />
+                    ))}
                 </S.SidebarFriendList>
             </S.SidebarWrapper>
         </S.Sidebar>
