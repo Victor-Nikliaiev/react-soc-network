@@ -15,8 +15,9 @@ export const Post = ({
     const [isLiked, setIsLiked] = useState(false);
 
     const likeHandler = () => {
+        console.log("Liked click!!");
         setLikeCounter(isLiked ? likeCounter - 1 : likeCounter + 1);
-        setIsLiked(value => !value);
+        setIsLiked(!isLiked);
     };
 
     return (

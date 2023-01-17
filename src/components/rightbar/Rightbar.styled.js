@@ -32,6 +32,8 @@ export const RightbarAd = styled.img`
 
 export const RightbarTitle = styled.h4`
     margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
 `;
 
 export const RightbarFriendList = styled.ul`
@@ -71,3 +73,43 @@ export const RightbarOnline = styled.span`
 export const RightbarUsername = styled.span`
     font-weight: 500;
 `;
+
+export const RightbarInfo = styled.div`
+    margin-bottom: 30px;
+`;
+
+export const RightbarInfoItem = styled.div`
+    margin-bottom: 10px;
+`;
+
+export const RightbarInfoKey = styled.span`
+    font-weight: 500;
+    margin-right: 15px;
+    color: #555;
+`;
+
+export const RightbarInfoValue = styled.span`
+    font-weight: 300;
+`;
+
+export const RightbarFollowings = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+`;
+
+export const RightbarFollowing = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    cursor: pointer;
+`;
+
+export const RightbarFollowingImg = styled.img`
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+`;
+
+export const RightbarFollowingName = styled.span``;
