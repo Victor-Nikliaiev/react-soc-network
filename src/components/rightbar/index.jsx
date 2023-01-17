@@ -69,10 +69,11 @@ const ProfileRightbar = () => (
 );
 
 export const Rightbar = ({ profile }) => {
+    console.log(profile);
     return (
         <S.Rightbar>
             <S.RightbarWrapper>
-                <ProfileRightbar />
+                {profile ? <ProfileRightbar /> : <HomeRightbar />}
             </S.RightbarWrapper>
         </S.Rightbar>
     );
