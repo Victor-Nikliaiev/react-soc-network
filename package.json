@@ -4,7 +4,7 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "vite",
+        "start": "vite",
         "build": "vite build",
         "preview": "vite preview"
     },
@@ -13,8 +13,10 @@
         "@material-ui/icons": "^4.11.3",
         "@mui/material": "^5.11.4",
         "@mui/styled-engine-sc@latest": "^5.11.0",
+        "axios": "^1.2.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-router-dom": "^6.7.0",
         "styled-components": "^5.3.6"
     },
     "devDependencies": {
@@ -22,5 +24,6 @@
         "@types/react-dom": "^18.0.9",
         "@vitejs/plugin-react": "^3.0.0",
         "vite": "^4.0.0"
-    }
+    },
+    "proxy": "http://localhost:8880/api"
 }

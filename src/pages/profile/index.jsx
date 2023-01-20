@@ -2,6 +2,7 @@ import { Feed } from "../../components/feed";
 import { Rightbar } from "../../components/rightbar";
 import { Sidebar } from "../../components/sidebar";
 import { Topbar } from "../../components/topbar";
+import { PF } from "../../dummyData.js";
 import * as S from "../profile/Profile.styled.js";
 
 export const Profile = () => {
@@ -14,11 +15,11 @@ export const Profile = () => {
                     <S.ProfileRightTop>
                         <S.ProfileCover>
                             <S.ProfileCoverImg
-                                src='./assets/post/3.jpeg'
+                                src={`${PF}post/3.jpeg`}
                                 alt=''
                             />
                             <S.ProfileUserImg
-                                src='./assets/person/0.jpg'
+                                src={`${PF}person/0.jpg`}
                                 alt=''
                             />
                         </S.ProfileCover>

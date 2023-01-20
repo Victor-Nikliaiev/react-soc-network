@@ -1,5 +1,6 @@
 import { Search } from "@material-ui/icons";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const TopbarContainer = styled.div`
     height: 50px;
@@ -42,6 +43,10 @@ export const Logo = styled.span`
     font-weight: bold;
     color: white;
     cursor: pointer;
+`;
+
+export const TopbarLogoLink = styled(Link)`
+    text-decoration: none;
 `;
 
 export const Searchbar = styled.div`

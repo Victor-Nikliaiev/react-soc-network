@@ -5,7 +5,9 @@ export const Topbar = () => {
     return (
         <S.TopbarContainer>
             <S.TopbarLeft>
-                <S.Logo>Arhis GGN v1.0</S.Logo>
+                <S.TopbarLogoLink to='/'>
+                    <S.Logo>Arhis GGN v1.0</S.Logo>
+                </S.TopbarLogoLink>
             </S.TopbarLeft>
             <S.TopbarCenter>
                 <S.Searchbar>

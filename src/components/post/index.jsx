@@ -1,5 +1,6 @@
 import { MoreVert } from "@material-ui/icons";
 import { useState } from "react";
+import { PF } from "../../dummyData.js";
 import * as S from "./Post.styled.js";
 
 export const Post = ({
@@ -25,7 +26,7 @@ export const Post = ({
             <S.PostWrapper>
                 <S.PostTop>
                     <S.PostTopLeft>
-                        <S.PostProfileImage src={profilePicture} alt='' />
+                        <S.PostProfileImage src={PF + profilePicture} alt='' />
                         <S.PostUsername>{username}</S.PostUsername>
                         <S.PostDate>{date}</S.PostDate>
                     </S.PostTopLeft>
@@ -35,17 +36,17 @@ export const Post = ({
                 </S.PostTop>
                 <S.PostCenter>
                     <S.PostText>{desc}</S.PostText>
-                    <S.PostImg src={photo} alt='' />
+                    <S.PostImg src={PF + photo} alt='' />
                 </S.PostCenter>
                 <S.PostBottom>
                     <S.PostBottomLeft>
                         <S.LikeIcon
                             onClick={likeHandler}
-                            src='./assets/like.png'
+                            src={`${PF}like.png`}
                         />
                         <S.LikeIcon
                             onClick={likeHandler}
-                            src='./assets/heart.png'
+                            src={`${PF}heart.png`}
                         />
                         <S.PostLikeCounter>
                             {likeCounter} people like it

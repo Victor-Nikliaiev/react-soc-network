@@ -1,5 +1,5 @@
 import * as S from "./Rightbar.styled.js";
-import { Users } from "../../dummyData.js";
+import { PF, Users } from "../../dummyData.js";
 import { Online } from "../online/index.jsx";
 
 const HomeRightbar = () => (
@@ -11,7 +11,7 @@ const HomeRightbar = () => (
                 <strong>3 other friends</strong> have a birthday today.
             </S.BirthdayText>
         </S.BirthdayContainer>
-        <S.RightbarAd src='./assets/ad.png' alt='' />
+        <S.RightbarAd src={`${PF}ad.png`} alt='' />
         <S.RightbarTitle>Online Friends</S.RightbarTitle>
         <S.RightbarFriendList>
             {Users.map(user => (
@@ -41,27 +41,27 @@ const ProfileRightbar = () => (
         <S.RightbarTitle>User friends</S.RightbarTitle>
         <S.RightbarFollowings>
             <S.RightbarFollowing>
-                <S.RightbarFollowingImg src='./assets/person/1.jpeg' />
+                <S.RightbarFollowingImg src={`${PF}person/1.jpeg`} />
                 <S.RightbarFollowingName>John Carter</S.RightbarFollowingName>
             </S.RightbarFollowing>
             <S.RightbarFollowing>
-                <S.RightbarFollowingImg src='./assets/person/2.jpeg' />
+                <S.RightbarFollowingImg src={`${PF}person/2.jpeg`} />
                 <S.RightbarFollowingName>John Carter</S.RightbarFollowingName>
             </S.RightbarFollowing>
             <S.RightbarFollowing>
-                <S.RightbarFollowingImg src='./assets/person/3.jpeg' />
+                <S.RightbarFollowingImg src={`${PF}person/3.jpeg`} />
                 <S.RightbarFollowingName>John Carter</S.RightbarFollowingName>
             </S.RightbarFollowing>
             <S.RightbarFollowing>
-                <S.RightbarFollowingImg src='./assets/person/4.jpeg' />
+                <S.RightbarFollowingImg src={`${PF}person/4.jpeg`} />
                 <S.RightbarFollowingName>John Carter</S.RightbarFollowingName>
             </S.RightbarFollowing>
             <S.RightbarFollowing>
-                <S.RightbarFollowingImg src='./assets/person/5.jpeg' />
+                <S.RightbarFollowingImg src={`${PF}person/5.jpeg`} />
                 <S.RightbarFollowingName>John Carter</S.RightbarFollowingName>
             </S.RightbarFollowing>
             <S.RightbarFollowing>
-                <S.RightbarFollowingImg src='./assets/person/6.jpeg' />
+                <S.RightbarFollowingImg src={`${PF}person/6.jpeg`} />
                 <S.RightbarFollowingName>John Carter</S.RightbarFollowingName>
             </S.RightbarFollowing>
         </S.RightbarFollowings>
