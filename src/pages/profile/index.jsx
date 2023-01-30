@@ -32,7 +32,7 @@ export const Profile = () => {
                     </S.ProfileRightTop>
 
                     <S.ProfileRightBottom>
-                        <Feed />
+                        <Feed username='Arhis' />
                         <Rightbar profile />
                     </S.ProfileRightBottom>
                 </S.ProfileRight>

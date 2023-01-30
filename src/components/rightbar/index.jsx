@@ -69,7 +69,6 @@ const ProfileRightbar = () => (
 );
 
 export const Rightbar = ({ profile }) => {
-    console.log(profile);
     return (
         <S.Rightbar>
             <S.RightbarWrapper>

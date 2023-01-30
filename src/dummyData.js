@@ -1,4 +1,10 @@
-export const PF = import.meta.env.VITE_PUBLIC_FOLDER;
+import axios from "axios";
+
+export const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
+export const instance = axios.create({
+    baseURL: process.env.REACT_APP_BASE_URL,
+});
 
 export const Users = [
     {

@@ -1,19 +1,24 @@
 import { MoreVert } from "@material-ui/icons";
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { PF } from "../../dummyData.js";
 import * as S from "./Post.styled.js";
+import { format } from "timeago.js";
+import { Link } from "react-router-dom";
 
-export const Post = ({
-    date,
-    desc,
-    like,
-    comment,
-    photo,
-    profilePicture,
-    username,
-}) => {
-    const [likeCounter, setLikeCounter] = useState(like);
+export const Post = ({ createdAt, desc, likes, comment, photo, userId }) => {
+    const [likeCounter, setLikeCounter] = useState(likes.length);
     const [isLiked, setIsLiked] = useState(false);
+    const [user, setUser] = useState({});
+
+    useEffect(() => {
+        const fetchUser = async () => {
+            const res = await axios.get(`/users/${userId}`);
+            setUser(res.data);
+        };
+
+        fetchUser();
+    }, [userId]);
 
     const likeHandler = () => {
         console.log("Liked click!!");
@@ -26,9 +31,19 @@ export const Post = ({
             <S.PostWrapper>
                 <S.PostTop>
                     <S.PostTopLeft>
-                        <S.PostProfileImage src={PF + profilePicture} alt='' />
-                        <S.PostUsername>{username}</S.PostUsername>
-                        <S.PostDate>{date}</S.PostDate>
+                        <Link to={`profile/${user.username}`}>
+                            <S.PostProfileImage
+                                src={
+                                    user.profilePicture
+                                        ? PF + user.profilePicture
+                                        : PF + "person/noAvatar.jpg"
+                                }
+                                alt=''
+                            />
+                        </Link>
+
+                        <S.PostUsername>{user.username}</S.PostUsername>
+                        <S.PostDate>{format(createdAt)}</S.PostDate>
                     </S.PostTopLeft>
                     <S.PostTopRight>
                         <MoreVert />
